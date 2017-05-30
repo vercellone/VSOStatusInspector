@@ -97,6 +97,12 @@ namespace VSOStatusInspector
 
             //set icon to unknown till processing
             SetIcon(Resources.waiting);
+            
+            // TODO
+            // GET JSON from https://www.visualstudio.com/wp-json/vscom/v1/service-status
+            // Sample:
+            // {"status":"Available","message":"Everything is looking good","title":"Visual Studio Team Services is up and running"}
+            // status = {"Available", "Maintenance"}
 
             HtmlWeb htmlWeb = new HtmlWeb();
             HtmlDocument doc = htmlWeb.Load("https://www.visualstudio.com/en-us/support/support-overview-vs.aspx");
